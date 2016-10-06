@@ -5,7 +5,7 @@ require 'sinatra/activerecord'
 require './environments'
 
 class Account < ActiveRecord::Base
-  self.table_name = 'salesforce.Account'
+  self.table_name = 'salesforce.account'
 end
 
 get "/accounts" do
