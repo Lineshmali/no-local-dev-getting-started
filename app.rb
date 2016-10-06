@@ -14,6 +14,7 @@ class Account < ActiveRecord::Base
 end
 
 get "/accounts" do
+  @accounts = Account.all
   erb :accounts
 end
 
