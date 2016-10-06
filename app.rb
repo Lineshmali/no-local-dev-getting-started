@@ -8,7 +8,9 @@ class Contact < ActiveRecord::Base
   self.table_name = 'salesforce.contact'
 end
 
-
+get "/accounts" do
+  erb :accounts
+end
 
 get "/contacts" do
   @contacts = Contact.all
