@@ -3,13 +3,11 @@
   <table class="table table-striped table-bordered">
     <tr>
       <th>Name</th>
-      <th>Created Date</th>
     </tr>
 
     <% @contacts.each do |contact| %>
       <tr>
-        <td><%= contact.Name %></td>
-        <td><%= contact.CreatedDate %></td>
+        <td><%= contact.name %></td>
       </tr>
     <% end %>
   </table>
