@@ -8,21 +8,24 @@ class Account < ActiveRecord::Base
   self.table_name = 'salesforce.account'
 end
 
+class Contact < ActiveRecord::Base
+  self.table_name = 'salesforce.contact'
+end
+
 get "/accounts" do
   @accounts = Account.all
-  erb :index
+  erb :accounts
+end
+
+get "/contacts" do
+  @contacts = Contact.all
+  erb :contacts
 end
 
 
 get "/" do
   erb :home
 end
-
-
-#get "/contacts" do
-#  @contacts = Contact.all
-#  erb :index
-#end
 
 get "/create" do
   dashboard_url = 'https://dashboard.heroku.com/'
