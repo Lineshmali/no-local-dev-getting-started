@@ -4,6 +4,12 @@
       <th>Name</th>
       <th>Created Date</th>
     </tr>
+    <% @accounts.each do |account| %>
+      <tr>
+        <td><%= account.Name %></td>
+        <td><%= account.CreatedDate %></td>
+      </tr>
+    <% end %>
   </table>
 
 </div>
